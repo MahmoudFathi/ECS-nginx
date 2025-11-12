@@ -8,18 +8,18 @@ phases:
   build:
     commands:
       - echo Building Docker image...
-      - docker build -t nginx-service .
+      - docker build -t mahmoud-fathi . .
       - echo "Tagging the image.."
-      - docker tag nginx-service:latest 058264351046.dkr.ecr.us-east-1.amazonaws.com/nginx-service:latest
-
+      - docker tag mahmoud-fathi:latest 058264351046.dkr.ecr.us-east-1.amazonaws.com/mahmoud-fathi:latest
       
   post_build:
     commands:
       - echo Pushing Docker images to ECR...
-      - docker push 058264351046.dkr.ecr.us-east-1.amazonaws.com/nginx-service:latest
+      - docker push 058264351046.dkr.ecr.us-east-1.amazonaws.com/mahmoud-fathi:latest
       
       
 artifacts:
   files: 
 
      - '**/*'
+

@@ -1,6 +1,5 @@
 # Use the official Nginx base image
-FROM nginx:alpine
-
+FROM nginx
 # Remove the default Nginx index.html
 RUN rm /usr/share/nginx/html/index.html
 
